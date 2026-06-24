@@ -6,7 +6,7 @@ class Node {
     int data;       
     Node* next;     
 
-    // Constructor to initialize a node
+    
     Node(int data) {
         this->data=data;
         this->next=NULL;
@@ -14,7 +14,7 @@ class Node {
 };
 
 void insertAtEnd(Node*& head, Node*& tail, int x) {
-    Node* temp = new Node(x); // Create a new node
+    Node* temp = new Node(x); 
     tail->next=temp;
     tail=tail->next;
 }
@@ -44,11 +44,11 @@ void printList(Node* head) {
 int main() {
     Node *node1= new Node(12);
     Node* head = node1; 
-    Node* tail = node1; // Initialize tail
+    Node* tail = node1; 
 
     insertAtEnd(head, tail, 14); 
     insertAtEnd(head, tail, 18); 
     insertAtposition(head, 3, 24);
-    printList(head); // Print the linked list
+    printList(head); 
     return 0;
 }

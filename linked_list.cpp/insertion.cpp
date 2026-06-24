@@ -6,29 +6,30 @@ class Node {
     int data;       
     Node* next;     
 
-    // Constructor to initialize a node
     Node(int value) {
         data = value;
         next = nullptr;
     }
 };
 
-// Function to insert a value at the end of the linked list
-void insert(Node*& head, int value) {
-    Node* newNode = new Node(value); // Create a new node with the value
-    if (head == nullptr) {           // If the list is empty
-        head = newNode;              // New node becomes the head
+
+void insert(Node*& head, int value) 
+{
+    Node* newNode = new Node(value); 
+    if (head == nullptr) {           
+        head = newNode;              
         return;
     }
-    Node* temp = head;               // Temporary pointer to traverse the list
-    while (temp->next != nullptr) {  // Traverse to the end of the list
+    Node* temp = head;               
+    while (temp->next != nullptr) {  
         temp = temp->next;
     }
-    temp->next = newNode;            // Link the new node at the end
-}
+    temp->next = newNode; 
+}           
 
 // Function to display the linked list
-void display(Node* head) {
+void display(Node* head) 
+{
     Node* temp = head;               
     while (temp != nullptr) {
         cout << temp->data << " -> ";
